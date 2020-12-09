@@ -52,6 +52,8 @@ bool hittable_list::bounding_box(double time0, double time1, aabb& output_box) c
         output_box = first_box ? temp_box : surrounding_box(output_box, temp_box);
         first_box = false;
     }
+
+    return true;
 }
 
 #endif
